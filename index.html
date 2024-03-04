@@ -6,31 +6,41 @@
     <meta name="description" content="">
     <title>Accueil - Club Auto</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <section>
-            <p>CLUB AUTO</p>
-        </section>
-        <address>
-            <img src="img/map-marker.svg" alt="localisation">
-            <p>ADRESSE</p>
-            <p>AVENUE CHARLES DE GAULLE</p>
-            <p>75005 PARIS</p>
-        </address>
-        <address>
-            <p>TÉLÉPHONE</p>
-            <img src="img/phone.svg" alt="Téléphone"><p>01 23 45 67 89</p>
-        </address>
-        <section>
-            <p>OUVERTURE : DU lundi au Samedi</p>
-            <p>HORAIRES : De 9h à 17h</p>
-        </section>
-        <section>
-            <img src="img/facebook.svg" alt="logo facebook">
-            <img src="img/twitter.svg" alt="logo twitter">
-        </section>
-        <nav>
+    <header id="mainHeader">
+        <section id="mainHeaderContent" >
+                <div>
+                <p id="marque"><strong>CLUB AUTO</strong></p>
+                </div>
+                <address class="mainHeaderItem">
+                    <img src="img/map-marker.svg" alt="localisation" class="icon">
+                    <div>
+                    <p class="entete">ADRESSE :</p>
+                    <p>AVENUE CHARLES DE GAULLE</p>
+                    <p>75005 PARIS</p>
+                    </div>
+                </address>
+                <address class="mainHeaderItem">
+                    <img src="img/phone.svg" alt="Téléphone"  class="icon">
+                    <div>
+                    <p class="entete">TÉLÉPHONE :</p>
+                    <p>01 23 45 67 89</p>
+                    </div>
+                </address>
+                <section class="mainHeaderItem">
+                    <div>
+                        <p><span class="entete">OUVERTURE :</span> DU lundi au Samedi</p>
+                        <p><span class="entete">OHORAIRES :</span> De 9h à 17h</p>
+                    </div>
+                </section>
+                <section  class="mainHeaderItem">
+                    <img src="img/facebook.svg" alt="logo facebook"  class="icon">
+                    <img src="img/twitter.svg" alt="logo twitter"  class="icon">
+                </section>
+        </section>  
+        <nav id="mainNav">
             <ul>
                 <li><a href="#">ACCUEIL</a></li>
                 <li><a href="#">VENTE</a></li>
