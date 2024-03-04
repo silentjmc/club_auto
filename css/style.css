@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
+
+:root {
+    --white: #FFFFFF;
+    --orange: #FAB637;
+    --red: #FF4848;
+    --brown: #CC6119;
+    --blueLight: #ECEFF3;
+    --black: #232628;
+    --blue: #6C98E1;
+}
+
+body {
+    font-family: Open sans, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+}
