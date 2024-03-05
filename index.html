@@ -7,14 +7,16 @@
     <title>Accueil - Club Auto</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+    <script src="js/menu.js" defer></script>
 </head>
 <body>
     <header id="mainHeader">
         <section id="mainHeaderContent" >
-                <div>
-                <p id="marque"><strong>CLUB AUTO</strong></p>
+                <div  id="marque">
+                <p><strong>CLUB AUTO</strong></p>
                 </div>
-                <address class="mainHeaderItem">
+                <address class="mainHeaderAdress">
                     <img src="img/map-marker.svg" alt="localisation" class="icon">
                     <div>
                     <p class="entete">ADRESSE :</p>
@@ -22,54 +24,60 @@
                     <p>75005 PARIS</p>
                     </div>
                 </address>
-                <address class="mainHeaderItem">
+                <address class="mainHeaderPhone">
                     <img src="img/phone.svg" alt="Téléphone"  class="icon">
-                    <div>
+                    <div class="textIcon">
                     <p class="entete">TÉLÉPHONE :</p>
-                    <p>01 23 45 67 89</p>
+                    <p id="phoneText">01 23 45 67 89</p>
                     </div>
                 </address>
-                <section class="mainHeaderItem">
+                <section class="mainHeaderTime">
                     <div>
-                        <p><span class="entete">OUVERTURE :</span> DU lundi au Samedi</p>
-                        <p><span class="entete">OHORAIRES :</span> De 9h à 17h</p>
+                        <p><span class="entete">OUVERTURE :</span> Du lundi au Samedi</p>
+                        <p><span class="entete">HORAIRES :</span> De 9h à 17h</p>
                     </div>
                 </section>
-                <section  class="mainHeaderItem">
-                    <img src="img/facebook.svg" alt="logo facebook"  class="icon">
-                    <img src="img/twitter.svg" alt="logo twitter"  class="icon">
+                <section class="mainHeaderSocial">
+                    <img src="img/facebook_gris.svg" alt="logo facebook"  class="icon iconReseau">
+                    <img src="img/twitter_gris.svg" alt="logo twitter"  class="icon iconReseau">
+                </section>
+                <section class="mainHeaderBurger">
+                    <button id="menuToggle"><img src="img/menu_burger.svg" alt="Ouvrir / Fermer le menu" /></button>
                 </section>
         </section>  
         <nav id="mainNav">
-            <ul>
-                <li><a href="#">ACCUEIL</a></li>
-                <li><a href="#">VENTE</a></li>
-                <li><a href="#">LOCATION</a></li>
-                <li><a href="#">CONTACT</a></li>
+            <ul class="mainNavMenu">
+                <li><a href="#" class="mainNavMenuItem mainNavActif">ACCUEIL</a></li>
+                <li><a href="#" class="mainNavMenuItem">VENTE</a></li>
+                <li><a href="#" class="mainNavMenuItem">LOCATION</a></li>
+                <li><a href="#" class="mainNavMenuItem">CONTACT</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <figure>
+    <main id="mainContent">
+        <figure id="heroImage">
             <img src="img/vehicule1.jpg" alt="photos plusieurs voitures en ligne">
-            <figcaption><h1>CLUB AUTO LE MEILLEUR DE L'AUTOMOBILE</h1></figcaption>
         </figure>
+        <h1>CLUB AUTO <span class="textOrange">LE MEILLEUR DE L'AUTOMOBILE</span></h1>
         <section>
-            <img src="img/clients.jpg" alt="Clients heureux devant une voiture neuve en concession">
-            <h2>BIENVENUE CHEZ CLUB AUTO</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque maxime eius magnam. Eligendi eum aperiam voluptate libero nostrum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio earum et impedit magni quas. Id necessitatibus dicta molestias ducimus perspiciatis, commodi quae consectetur nostrum tempora, quaerat ullam eius sit! Nostrum, itaque consequuntur porro ratione cupiditate sit, perspiciatis at voluptates ipsam facere eos nemo non quaerat ipsum omnis mollitia magnam consequatur eum, fugit in? Dolorum excepturi a nihil, laborum provident ea quas in nobis vitae atque cumque odit ab quibusdam voluptates iure repudiandae et cupiditate corporis?</p>
-        </section>
-        <section>
-            <h2>LE MEILLEUR DE L'AUTOMOBILE</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum reiciendis necessitatibus ex nobis eum, facilis illo, magnam voluptatem, maxime iure assumenda totam impedit vel dolorum vitae? Facilis quia quod ex minima libero illum tempora sint impedit, alias fugiat laudantium blanditiis quis, quam aliquam ratione a perferendis. Obcaecati, fugit, at fugiat dolorum suscipit mollitia necessitatibus non quas eaque consequuntur quam ipsum.</p>
-            <ul>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Optio fugiat officiis sapiente voluptate!</li>
-                <li>Nesciunt quae nostrum saepe quibusdam?</li>
-                <li>Itaque consequatur accusamus fugit qui!</li>
-                <li>Blanditiis qui ipsam quia maxime.</li>
-            </ul>
+            <article>
+                <img src="img/clients.jpg" alt="Clients heureux devant une voiture neuve en concession" class="imageArticle">
+                <h2>BIENVENUE CHEZ <span class="textOrange">CLUB AUTO</span></h2>
+                <p><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque maxime eius magnam. Eligendi eum aperiam voluptate libero nostrum.</strong></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio earum et impedit magni quas. Id necessitatibus dicta molestias ducimus perspiciatis, commodi quae consectetur nostrum tempora, quaerat ullam eius sit! Nostrum, itaque consequuntur porro ratione cupiditate sit, perspiciatis at voluptates ipsam facere eos nemo non quaerat ipsum omnis mollitia magnam consequatur eum, fugit in? Dolorum excepturi a nihil, laborum provident ea quas in nobis vitae atque cumque odit ab quibusdam voluptates iure repudiandae et cupiditate corporis?</p>
+            </article>
+            <article>
+                <h2>LE MEILLEUR DE L'AUTOMOBILE</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum reiciendis necessitatibus ex nobis eum, facilis illo, magnam voluptatem, maxime iure assumenda totam impedit vel dolorum vitae? Facilis quia quod ex minima libero illum tempora sint impedit, alias fugiat laudantium blanditiis quis, quam aliquam ratione a perferendis. Obcaecati, fugit, at fugiat dolorum suscipit mollitia necessitatibus non quas eaque consequuntur quam ipsum.</p>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Optio fugiat officiis sapiente voluptate!</li>
+                    <li>Nesciunt quae nostrum saepe quibusdam?</li>
+                    <li>Itaque consequatur accusamus fugit qui!</li>
+                    <li>Blanditiis qui ipsam quia maxime.</li>
+                </ul>
+                <img src="img/entretien.jpg" alt="Employé qui fait l'entretien d'une voiture" class="imageArticle">
+            </article>
         </section>
         <section>
             <img src="img/vehicule4.jpg" alt="">
