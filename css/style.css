@@ -13,19 +13,26 @@
 body {
     font-family: Open sans, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
-    box-sizing: border-box;
-}
-
-img {
-    max-width: 100%;
-    justify-content: center;
-    height: auto;
-    /* margin: 10% 10% 0 10%; */
+    box-sizing: content-box;
 }
 
 address {
   font-style: normal;
 }
+
+h1 {
+  background-color: var(--black);
+  color: var(--white);
+  margin:0px;
+  padding-left: 5%;
+  padding-top:1rem;
+}
+
+h2 {
+  color: var(--black);
+  text-align: center;
+}
+
 
 #mainHeaderContent {
     display: flex;
@@ -33,27 +40,29 @@ address {
     /* width: auto; */
     color: var(--white);
     background-color: var(--black);
-    justify-content: center;
-    line-height: 0.1rem;
+    /* justify-content: center; */
+    /* line-height: 1rem; */
     font-size: 0.7rem;
-    height:auto;
-    align-items: center;
+    /* height:auto; */
+    /* align-items: center; */
     /* margin:0px;
     padding:0px; */
   }
 
 .mainHeaderPhone, .mainHeaderBurger{
     display: flex;
-    gap: 3%;
+    gap: 5px;
     color: var(--white);
     background-color: var(--black);
-    width: 100%;
+    width: auto;
   }
 .mainHeaderPhone {
-  align-self: start;
-  justify-content: start;
-  margin-left:10px;
+  /* align-self: center;
+  justify-content: Start; */
+  margin-left:5%;
+  /* height: auto; */
   }
+
 
 .mainHeaderBurger{
     align-self:end;
@@ -68,7 +77,6 @@ address {
     color: var(--white);
     background-color: var(--black);
     justify-content: center;
-    /* width: 15%; */
     align-self: start;
     margin-top: 1rem;
   }
@@ -78,19 +86,24 @@ address {
     display:none;
   }
 
+.textIcon > p {
+    margin:0px;
+    padding:0px;
+}
+
 #phoneText {
   font-size:1.4rem;
   font-weight: bold;
 }
 
 .entete {
-    color: var(--orange);
+    color: var(--brown);
     font-weight: bold;
   }
 
 .icon {
     align-self: start;
-    max-width: 50px;
+    max-width: 40px;
 }
 
 .iconReseau {
@@ -145,33 +158,167 @@ address {
     font-weight: bold;
     background-color: var(--orange);
   }
-
+  
+/* CSS pour la partie main   */
 #heroImage {
   display:none;
 }
 
 main ul {
   list-style-image: url('../img/check.svg');
+  line-height: 2rem;
 }
 
-h1 {
-  background-color: var(--black);
-  color: var(--white);
-  margin:0px;
-  /* padding-left: 5%; */
-}
-
-.textOrange {
-  color: var(--orange);
+.textBrown {
+  color: var(--brown);
 }
 
 .imageArticle {
-  width:80%;
+  width:100%;
   float: none;
-  padding:5% 10% 0 10% ;
 }
 
+.articleContent {
+  padding:5% 10% 0 10%;
+}
 
+.articleContent > h2 {
+  text-align: start;
+}
+
+.articleContent > p {
+  line-height: 1.6rem;
+}
+
+.souhaitContainer {
+  background-image: url(../img/vehicule4.jpg);
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  background-position: top;
+}
+
+.souhaitBox {
+  padding: 5% 15%;
+  margin-top: 2rem;
+  line-height: 1.4rem;
+} 
+
+.boxOrange {
+  background-color: var(--orange);
+  opacity: 90%;
+}
+
+.boxRed {
+  background-color: var(--red);
+  opacity: 90%;
+}
+
+.vehiculeContainer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 0 5%;
+}
+
+.vehiculeContainer > h2{
+  color: var(--white);
+  font-size: 2rem;
+  padding-bottom: 1rem ;
+  border-bottom: var(--brown) solid 2px;
+}
+
+.vahiculeFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.vehiculeAnnonce{
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.vehiculeAnnonce:first-child {
+  display: flex;
+}
+
+.vehiculeAnnonce > img {
+  width: 100%;
+}
+
+.prix {
+  background-color: var(--blue);
+  display: inline-block;
+  width: 5rem;
+  padding: 1rem;
+  margin-left: 15%;
+  margin-bottom: 0;
+}
+
+.choisirContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+}
+
+.choisirContent {
+  display: flex;
+  flex-direction: row;
+  gap:5%;
+}
+
+.choisirContent > img {
+  width: 15%;
+  height: 15%;
+  margin-top:1rem;
+}
+
+.choisirContent > div > p {
+  margin-bottom: 2rem;
+}
+
+.btnContact {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: bold;
+  background-color: var(--blue);
+  text-align: center;
+  align-self: center;
+  width: 15rem;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.venteLocationContainer {
+  background-image: url(../img/vehicule3.jpg);
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  background-position: top;
+}
+
+.venteLocationBox {
+  padding: 5% 15%;
+  margin-top: 10rem;
+  line-height: 1.4rem;
+} 
+
+.venteLocationEntete > h2{
+  text-align: left;
+} 
+.venteLocationEntete > p {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.4rem;
+} 
+
+.venteLocationBox > p {
+  color: var(--black);
+}
 
 @media screen and (min-width: 1024px){
   #mainHeader {
@@ -203,7 +350,7 @@ h1 {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    margin-right:20%;
+    /* margin-right:20%; */
   }
   #mainNavMenuItem {
     display: block;
