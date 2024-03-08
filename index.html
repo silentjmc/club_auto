@@ -11,15 +11,17 @@
     <script src="js/menu.js" defer></script>
 </head>
 <body>
+    <!-- header -->
     <header id="headerContainer">
+        <!-- Début Partie 1 du header pouvant contenir marque, adresse, téléphone, horaire, 2 réseeaux sociaux selon taille d'écran -->
         <section id="headerContent" >
                 <div  id="marque">
-                <p><strong>CLUB AUTO</strong></p>
+                <p class="textTitre"><strong>CLUB AUTO</strong></p>
                 </div>
-                <address id="headerAdress">
+                <address id="headerAddress">
                     <img src="img/map-marker.svg" alt="localisation" class="icon">
-                    <div>
-                        <p class="enteteBoxHeader">ADRESSE :</p>
+                    <div class="textIcon">
+                        <p class="enteteBoxHeader textTitre">ADRESSE :</p>
                         <p>AVENUE CHARLES DE GAULLE</p>
                         <p>75005 PARIS</p>
                     </div>
@@ -27,14 +29,14 @@
                 <address id="headerPhone">
                     <img src="img/phone.svg" alt="Téléphone"  class="icon">
                     <div class="textIcon">
-                        <p class="enteteBoxHeader">TÉLÉPHONE :</p>
+                        <p class="enteteBoxHeader textTitre">TÉLÉPHONE :</p>
                         <p id="phoneText">01 23 45 67 89</p>
                     </div>
                 </address>
                 <section id="headerTime">
-                    <div>
-                        <p><span class="enteteBoxHeader">OUVERTURE :</span> Du lundi au Samedi</p>
-                        <p><span class="enteteBoxHeader">HORAIRES :</span> De 9h à 17h</p>
+                    <div class="textIcon">
+                        <p><span class="enteteBoxHeader textTitre">OUVERTURE :</span> Du lundi au Samedi</p>
+                        <p><span class="enteteBoxHeader textTitre">HORAIRES :</span> De 9h à 17h</p>
                     </div>
                 </section>
                 <section id="headerSocial">
@@ -42,9 +44,13 @@
                     <img src="img/twitter_gris.svg" alt="logo twitter"  class="icon iconReseau">
                 </section>
                 <section id="headerBurger">
+                    <div style="background-color: black;">
                     <button id="menuToggle"><img src="img/menu_burger.svg" alt="Ouvrir / Fermer le menu" /></button>
+                    </div>
                 </section>
         </section>  
+        <!-- Fin partie 1 du header -->
+        <!-- Début Partie 2 du header avec la barre de navigation -->
         <nav id="mainNav">
             <ul class="mainNavMenu">
                 <li><a href="#" class="mainNavMenuItem mainNavActif">ACCUEIL</a></li>
@@ -53,20 +59,24 @@
                 <li><a href="#" class="mainNavMenuItem">CONTACT</a></li>
             </ul>
         </nav>
+        <!-- Fin Partie 2 du header -->
     </header>
+    <!-- fin header -->
+    <!-- Début de la partie principale Mainv -->
     <main id="mainContent">
         <figure id="heroImage">
             <img src="img/vehicule1.jpg" alt="photos plusieurs voitures en ligne">
         </figure>
         <h1>CLUB AUTO <span class="textBrown">LE MEILLEUR DE L'AUTOMOBILE</span></h1>
-        <section>
-            <article class="articleContent">
-                <img src="img/clients.jpg" alt="Clients heureux devant une voiture neuve en concession" class="imageArticle">
+        <section class="articleContainer">
+            <article class="articleContent1">
+                <img src="img/clients.jpg" alt="Clients heureux devant une voiture neuve en concession" class="imageArticleGauche">
                 <h2>BIENVENUE CHEZ <span class="textBrown">CLUB AUTO</span></h2>
                 <p><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis itaque maxime eius magnam. Eligendi eum aperiam voluptate libero nostrum.</strong></p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio earum et impedit magni quas. Id necessitatibus dicta molestias ducimus perspiciatis, commodi quae consectetur nostrum tempora, quaerat ullam eius sit! Nostrum, itaque consequuntur porro ratione cupiditate sit, perspiciatis at voluptates ipsam facere eos nemo non quaerat ipsum omnis mollitia magnam consequatur eum, fugit in? Dolorum excepturi a nihil, laborum provident ea quas in nobis vitae atque cumque odit ab quibusdam voluptates iure repudiandae et cupiditate corporis?</p>
             </article>
-            <article class="articleContent">
+            <article class="articleContent2">
+                <img src="img/entretien.jpg" alt="Employé qui fait l'entretien d'une voiture" class="imageArticleDroit"> 
                 <h2>LE MEILLEUR DE L'AUTOMOBILE</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum reiciendis necessitatibus ex nobis eum, facilis illo, magnam voluptatem, maxime iure assumenda totam impedit vel dolorum vitae? Facilis quia quod ex minima libero illum tempora sint impedit, alias fugiat laudantium blanditiis quis, quam aliquam ratione a perferendis. Obcaecati, fugit, at fugiat dolorum suscipit mollitia necessitatibus non quas eaque consequuntur quam ipsum.</p>
                 <ul>
@@ -76,15 +86,14 @@
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>Lorem ipsum dolor sit amet.</li>
                 </ul>
-                <img src="img/entretien.jpg" alt="Employé qui fait l'entretien d'une voiture" class="imageArticle">
             </article>
         </section>
         <section class="souhaitContainer">
-            <div class="souhaitBox  boxOrange">
+            <div class="souhaitBox boxOrange">
             <h2>Vous souhaitez louer ?</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit aliquid veritatis voluptate nostrum possimus rem magnam, impedit accusamus recusandae veniam distinctio expedita hic quod incidunt quibusdam id vero? Odio ullam fugiat est amet accusamus quasi.</p>
             </div>
-            <div class="souhaitBox  boxRed">
+            <div class="souhaitBox boxRed">
             <h2>Vous souhaitez acheter</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit aliquid veritatis voluptate nostrum possimus rem magnam, impedit accusamus recusandae veniam distinctio expedita hic quod incidunt quibusdam id vero? Odio ullam fugiat est amet accusamus quasi.</p>
             </div>
@@ -152,25 +161,27 @@
             <div class="venteLocationBox boxOrange">
                 <hrgoup class="venteLocationEntete">
                     <h2>CLUB AUTO</h2>
-                    <p>VENTE ET LOCATION</p>
+                    <p class="textTitre">VENTE ET LOCATION</p>
                 </hrgoup>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste nisi, nostrum architecto distinctio laudantium animi, commodi omnis maiores, consequatur deserunt nobis voluptatem. Magnam, quae explicabo eligendi, sequi inventore asperiores officia, dolor repellendus autem tenetur exercitationem ab voluptatum mollitia cum?</p>
             </div>
         </section>
     </main>
+    <!-- Fin de la partie principale Mainv -->
+    <!-- Début de la partie Footer -->
      <footer >
         <section id="footerContent" >
             <section  id="footerClub">
-                <p class="textWhite"><strong><span class="textBlue">CLUB</span> AUTO</strong></p>
+                <p class="textWhite textTitre"><strong><span class="textBlue">CLUB</span> AUTO</strong></p>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste, dolor aperiam repellendus quos a ut omnis assumenda sapiente ea.</p>
             </section>
             <section id="footerHoraires">
-                <p class="textWhite"><strong>HORAIRES D'OUVERTURE</strong></p>
+                <p class="textWhite textTitre"><strong>HORAIRES D'OUVERTURE</strong></p>
                 <p class="interligneCourt">lundi - Samedi : <span class="textWhite">09:00 - 17:00</span></p>
                 <p class="interligneCourt">Dimanche et jours fériés : <span class="textWhite">Fermé</span></p>
             </section>
             <section id="footerNewsletter">
-                <p class="textWhite"><strong>NEWSLETTER</strong></p>
+                <p class="textWhite textTitre"><strong>NEWSLETTER</strong></p>
                 <form id="footerFormNewsletter">
                     <input type="text" name="email" id="email" placeholder="Entrez votre email">
                     <input type="image" name="imageBouton" id="imageBtnNewsletter" alt="Envoyer" src="img/rss.svg"/>
@@ -178,7 +189,7 @@
                 <p>Inscrivez-vous pour recevoir les dernières offres</p>
             </section>
             <section id="footerReseaux">
-                <p class="textWhite"><strong>RÉSEAUX SOCIAUX</strong></p>
+                <p class="textWhite textTitre"><strong>RÉSEAUX SOCIAUX</strong></p>
                 <div id="footerIconReseaux">
                     <img src="img/facebook_square.svg" alt="logo facebook" class="iconFooter">
                     <img src="img/twitter_square.svg" alt="logo twitter" class="iconFooter">

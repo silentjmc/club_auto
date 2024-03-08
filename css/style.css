@@ -5,86 +5,90 @@
     --orange: #FAB637;
     --red: #FF4848;
     --brown: #CC6119;
-    --blueLight: #ECEFF3;
+    --grey: #ECEFF3;
     --black: #232628;
     --blue: #6C98E1;
 }
 
 body {
-    font-family: Open sans, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Open sans, sans-serif;
     font-size: 1rem;
     box-sizing: content-box;
 }
 
 address {
-  font-style: normal;
+ font-style: normal;
 }
 
 h1 {
   background-color: var(--black);
   color: var(--white);
   margin:0px;
-  padding-left: 5%;
-  padding-top:1rem;
+  padding: 1rem 1% 0 5%;
+  font-family: Montserrat, sans-serif;
 }
 
 h2 {
   color: var(--black);
   text-align: center;
+  font-family: Montserrat, sans-serif;
 }
 
+.textTitre {
+  font-family: Montserrat, sans-serif;
+}
 
-#mainHeaderContent {
+.textBrown {
+  color: var(--brown);
+}
+
+.textBlue {
+  color: var(--blue);
+}
+
+.textGrey {
+  color: var(--grey);
+}
+
+.textWhite {
+  color: var(--white);
+}
+
+.interligneCourt {
+  margin:0px;
+}
+
+#headerContainer {
+  color: var(--white);
+  background-color: var(--black);
+  font-size: 0.7rem;
+}
+
+#headerContent {
     display: flex;
     flex-direction: column-reverse;
-    /* width: auto; */
-    color: var(--white);
-    background-color: var(--black);
-    /* justify-content: center; */
-    /* line-height: 1rem; */
-    font-size: 0.7rem;
-    /* height:auto; */
-    /* align-items: center; */
-    /* margin:0px;
-    padding:0px; */
-  }
+} 
 
-.mainHeaderPhone, .mainHeaderBurger{
+#headerPhone {
     display: flex;
     gap: 5px;
-    color: var(--white);
-    background-color: var(--black);
     width: auto;
-  }
-.mainHeaderPhone {
-  /* align-self: center;
-  justify-content: Start; */
+}
+
+#headerPhone {
   margin-left:5%;
-  /* height: auto; */
-  }
+}
 
-
-.mainHeaderBurger{
+#headerBurger{
     align-self:end;
     justify-content: end;
     margin-top: 30px;
     margin-right:10px;
-  }
+}
 
-.mainHeaderAdress, .mainHeaderTime, .mainHeaderSocial {
+#marque, #headerAddress, #headerTime, #headerSocial {
     display: none;
-    gap: 3%;
-    color: var(--white);
-    background-color: var(--black);
-    justify-content: center;
-    align-self: start;
-    margin-top: 1rem;
-  }
-
-#marque {
-    font-size: 2rem;
-    display:none;
-  }
+}
 
 .textIcon > p {
     margin:0px;
@@ -96,19 +100,19 @@ h2 {
   font-weight: bold;
 }
 
-.entete {
+.enteteBoxHeader {
     color: var(--brown);
     font-weight: bold;
-  }
+}
 
 .icon {
-    align-self: start;
     max-width: 40px;
+    margin-right:10px;
 }
 
 .iconReseau {
     padding: 3%;
-  }
+}
 
 #menuToggle {
   background-color: var(--black);
@@ -118,7 +122,7 @@ h2 {
     list-style: none;
     display: flex;
     flex-direction: column;
-  }
+}
 
 #mainNav {
     width: 100%;
@@ -130,34 +134,34 @@ h2 {
     font-weight: bold;
     margin: 0px;
     padding:0px
-  }
+}
 
 .mainNavMenuItem {
     display:block;
     padding: 1%;
     color: var(--black);
     text-decoration: none;
-    font-size: 0.8rem;
-  }
+    font-size: 1.2rem;
+}
 
 .mainNavActif {
     color: white;
-    background-color: var(--orange);
-  }
+    background-color: var(--brown);
+}
   
 #mainNav a:hover {
     text-decoration: none;
     color: var(--white);
     font-weight: bold;
-    background-color: var(--orange);
-  }
+    background-color: var(--brown);
+}
 
 #mainNav a:active {
     text-decoration: none;
     color: var(--white);
     font-weight: bold;
-    background-color: var(--orange);
-  }
+    background-color: var(--brown);
+}
   
 /* CSS pour la partie main   */
 #heroImage {
@@ -169,24 +173,33 @@ main ul {
   line-height: 2rem;
 }
 
-.textBrown {
-  color: var(--brown);
-}
+/* .articleContainer {
+  display: inline-block;
+} */
 
-.imageArticle {
+.imageArticleGauche, .imageArticleDroit {
   width:100%;
   float: none;
 }
 
-.articleContent {
+.articleContent1, .articleContent2 {
   padding:5% 10% 0 10%;
+  float: none;
 }
 
-.articleContent > h2 {
+.articleContent1 > h2 {
   text-align: start;
 }
 
-.articleContent > p {
+.articleContent2 > h2 {
+  text-align: start;
+}
+
+.articleContent1 > p {
+  line-height: 1.6rem;
+}
+
+.articleContent2 > p {
   line-height: 1.6rem;
 }
 
@@ -228,7 +241,7 @@ main ul {
   border-bottom: var(--brown) solid 2px;
 }
 
-.vahiculeFlex {
+.vehiculeFlex {
   display: flex;
   flex-direction: column;
 }
@@ -298,7 +311,7 @@ main ul {
   display: flex;
   flex-direction: column;
   color: var(--white);
-  background-position: top;
+  background-position: top; 
 }
 
 .venteLocationBox {
@@ -319,52 +332,206 @@ main ul {
 .venteLocationBox > p {
   color: var(--black);
 }
+/* <---- fin du CSS pour Main ----> */
 
-@media screen and (min-width: 1024px){
-  #mainHeader {
-    width:100%;
-    position:fixed;
-    top:0px;
+
+/* <---- CSS pour footer ----> */
+#footerContent {
+  display: flex;
+  flex-direction: column;
+  color: var(--grey);
+  background-color: var(--black);
+  padding: 0 5%;
+  line-height: 1.4rem;
   }
+
+#footerFormNewsletter {
+  display: flex; 
+  align-items: start;
+
+}
+
+#email {
+    padding: 10px;
+    margin: 0px;
+    width: 80%;
+}
+
+#imageBtnNewsletter {
+    margin-top: 1px;
+    width: 40px;
+    height: 40px;
+}
+
+#footerIconReseaux {
+  display: flex;
+  justify-content: start;
+  gap: 5%;
+}
+
+.iconFooter {
+  max-width: 50px;
+}
+
+#copyright {
+  text-align: center;
+}
+
+/* <---- fin du CSS pour footer ----> */
+
+
+/* <---- CSS Media queries ----> */
+
+@media screen and (min-width: 768px){
+  #headerContainer {
+    width: 100%;
+    position: sticky;
+    top: 0pX;
+  }
+
+  #headerContent {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    padding-top: 30px;
+    /* align-items: baseline; */
+    gap:10px;
+    height:60px;
+  }
+
+  #marque, #headerAddress, #headerPhone {
+  display: flex;
+  flex: 1;
+  }
+
   #marque {
     font-size: 2rem;
-    display:flex;
+    justify-content: center;
   }
-  .mainHeaderAdress, .mainHeaderTime, .mainHeaderSocial {
+
+  #marque > p {
+    margin:0;
+  }  
+
+  #headerAddress, #headerPhone {
     display: flex;
+    align-items: start;
+    }
+
+  /* #headerAddress {
+    flex-basis: 26%;
+  } */
+
+  #headerPhone {
+    /* flex-basis: 24%; */
+    margin-left:0;
+    gap:0;
   }
-  .mainHeaderBurger{
+
+  /* #headerTime {
+    flex-basis: 25%;
+  } */
+
+  #phoneText {
+    font-size: 1.1rem;
+  }
+  #headerBurger {
     display: none;
-  }
+  }  
+
   .icon {
-    align-self: start;
-    max-width: 15%;
+    max-width: 30px;
+    margin-right:10px;
   }
 
   #mainNav {
-    display: block;
+    width: 100%;
+    display: flex;
+    background-color: var(--white);
+    opacity: 0.9;
+    justify-content: end;
   }
+
   #mainNav ul {
     list-style: none;
-    display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    /* margin-right:20%; */
+    /* padding: 15px; */
   }
-  #mainNavMenuItem {
-    display: block;
-    color: var(--black);
+
+  .mainNavMenu {
     text-decoration: none;
-    padding: 1rem;
+    font-weight: bold;
+    margin-right: 10%;
+    gap:5%;
   }
-  #mainNavActif {
-    color: white;
-    background-color: var(--orange);
+
+  .mainNavMenuItem {
+    display:inline-block;
+    text-decoration: none;
+    padding: 15px;
   }
+
   #heroImage {
-    width: 100%;
-    display: block;
-    max-width: max-content;
+    display:block;
   }
+
+  #heroImage > img {
+    width: 100%;
+  }
+
+  figure {
+    margin-bottom: 0px;
+  }
+
+  h1 {
+    margin:-4px 40px 0 40px;
+    padding: 2rem 10%;
+  }
+
+
+}
+
+
+
+@media screen and (min-width: 992px){
+  /* Rajout des horaires en haut de page */
+  #headerTime {
+    display: flex;
+    flex: 1;
+    }
+
+    .imageArticleGauche {
+      width: 48%;
+      float: left;
+      margin-right: 50px;
+    }
+
+    
+    .imageArticleDroit {
+      width: 48%;
+      float: right;
+      margin-left: 50px;
+    }
+
+
+    .articleContent > h2{
+      margin-top:0;
+
+    }
+
+    .articleContent {
+      padding:5% 10% 0 10%;
+      float: left;
+    }
+
+
+}
+
+
+@media screen and (min-width: 1200px){
+  /* Rajout des deux icônes de réseaux sociaux en haut de page */
+  #headerSocial {
+    display: flex;
+    flex: 0.5;
+    }
 }
