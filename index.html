@@ -11,37 +11,37 @@
     <script src="js/menu.js" defer></script>
 </head>
 <body>
-    <header id="mainHeader">
-        <section id="mainHeaderContent" >
+    <header id="headerContainer">
+        <section id="headerContent" >
                 <div  id="marque">
                 <p><strong>CLUB AUTO</strong></p>
                 </div>
-                <address class="mainHeaderAdress">
+                <address id="headerAdress">
                     <img src="img/map-marker.svg" alt="localisation" class="icon">
                     <div>
-                        <p class="entete">ADRESSE :</p>
+                        <p class="enteteBoxHeader">ADRESSE :</p>
                         <p>AVENUE CHARLES DE GAULLE</p>
                         <p>75005 PARIS</p>
                     </div>
                 </address>
-                <address class="mainHeaderPhone">
+                <address id="headerPhone">
                     <img src="img/phone.svg" alt="Téléphone"  class="icon">
                     <div class="textIcon">
-                        <p class="entete">TÉLÉPHONE :</p>
+                        <p class="enteteBoxHeader">TÉLÉPHONE :</p>
                         <p id="phoneText">01 23 45 67 89</p>
                     </div>
                 </address>
-                <section class="mainHeaderTime">
+                <section id="headerTime">
                     <div>
-                        <p><span class="entete">OUVERTURE :</span> Du lundi au Samedi</p>
-                        <p><span class="entete">HORAIRES :</span> De 9h à 17h</p>
+                        <p><span class="enteteBoxHeader">OUVERTURE :</span> Du lundi au Samedi</p>
+                        <p><span class="enteteBoxHeader">HORAIRES :</span> De 9h à 17h</p>
                     </div>
                 </section>
-                <section class="mainHeaderSocial">
+                <section id="headerSocial">
                     <img src="img/facebook_gris.svg" alt="logo facebook"  class="icon iconReseau">
                     <img src="img/twitter_gris.svg" alt="logo twitter"  class="icon iconReseau">
                 </section>
-                <section class="mainHeaderBurger">
+                <section id="headerBurger">
                     <button id="menuToggle"><img src="img/menu_burger.svg" alt="Ouvrir / Fermer le menu" /></button>
                 </section>
         </section>  
@@ -157,28 +157,39 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste nisi, nostrum architecto distinctio laudantium animi, commodi omnis maiores, consequatur deserunt nobis voluptatem. Magnam, quae explicabo eligendi, sequi inventore asperiores officia, dolor repellendus autem tenetur exercitationem ab voluptatum mollitia cum?</p>
             </div>
         </section>
-
     </main>
-     <footer>
-        <section>
-            <p>CLUB AUTO</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste, dolor aperiam repellendus quos a ut omnis assumenda sapiente ea.</p>
-        </section>
-        <section>
-            <p>HORAIRES D'OUVERTURE</p>
-            <p>lundi - Samedi : 09:00 - 17:00</p>
-            <p>Dimanche et jours fériés : Fermé</p>
-        </section>
-        <section>
-            <p>NEWSLETTER</p>
-            <input type="text" name="email" id="email" placeholder="Entrez votre email">
-            <p>Inscrivez-vous pour recevoir les dernières offres</p>
-        </section>
-        <section>
-            <p>RESEAUX SOCIAUX</p>
-        </section>
-        <section>
-            <p>Copyright &copy; Club Auto - Tous droits réservés</p>
+     <footer >
+        <section id="footerContent" >
+            <section  id="footerClub">
+                <p class="textWhite"><strong><span class="textBlue">CLUB</span> AUTO</strong></p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste, dolor aperiam repellendus quos a ut omnis assumenda sapiente ea.</p>
+            </section>
+            <section id="footerHoraires">
+                <p class="textWhite"><strong>HORAIRES D'OUVERTURE</strong></p>
+                <p class="interligneCourt">lundi - Samedi : <span class="textWhite">09:00 - 17:00</span></p>
+                <p class="interligneCourt">Dimanche et jours fériés : <span class="textWhite">Fermé</span></p>
+            </section>
+            <section id="footerNewsletter">
+                <p class="textWhite"><strong>NEWSLETTER</strong></p>
+                <form id="footerFormNewsletter">
+                    <input type="text" name="email" id="email" placeholder="Entrez votre email">
+                    <input type="image" name="imageBouton" id="imageBtnNewsletter" alt="Envoyer" src="img/rss.svg"/>
+                </form>
+                <p>Inscrivez-vous pour recevoir les dernières offres</p>
+            </section>
+            <section id="footerReseaux">
+                <p class="textWhite"><strong>RÉSEAUX SOCIAUX</strong></p>
+                <div id="footerIconReseaux">
+                    <img src="img/facebook_square.svg" alt="logo facebook" class="iconFooter">
+                    <img src="img/twitter_square.svg" alt="logo twitter" class="iconFooter">
+                    <img src="img/instagram_square.svg" alt="logo instagram" class="iconFooter">
+                    <img src="img/google_plus_square.svg" alt="logo google plus" class="iconFooter">
+                    <img src="img/youtube_square.svg" alt="logo youtube" class="iconFooter">
+                </div>
+            </section>
+            <section id="copyright">
+                <p>Copyright &copy; Club Auto - Tous droits réservés</p>
+            </section>
         </section>
     </footer>
 </body>
