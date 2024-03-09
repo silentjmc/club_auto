@@ -13,7 +13,7 @@
 body {
     font-family: Open sans, sans-serif;
     font-size: 1rem;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 address {
@@ -62,12 +62,13 @@ h2 {
   color: var(--white);
   background-color: var(--black);
   font-size: 0.7rem;
+  z-index: 1;
 }
 
 #headerContent {
     display: flex;
     flex-direction: column-reverse;
-} 
+}
 
 #headerPhone {
     display: flex;
@@ -148,7 +149,7 @@ h2 {
     color: white;
     background-color: var(--brown);
 }
-  
+
 #mainNav a:hover {
     text-decoration: none;
     color: var(--white);
@@ -162,7 +163,7 @@ h2 {
     font-weight: bold;
     background-color: var(--brown);
 }
-  
+
 /* CSS pour la partie main   */
 #heroImage {
   display:none;
@@ -177,29 +178,23 @@ main ul {
   display: inline-block;
 } */
 
-.imageArticleGauche, .imageArticleDroit {
+.imageArticle {
   width:100%;
-  float: none;
 }
 
-.articleContent1, .articleContent2 {
+.articleContent {
   padding:5% 10% 0 10%;
-  float: none;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-auto-columns: min-content;
 }
 
-.articleContent1 > h2 {
+.articleContent > div > h2 {
   text-align: start;
 }
 
-.articleContent2 > h2 {
-  text-align: start;
-}
-
-.articleContent1 > p {
-  line-height: 1.6rem;
-}
-
-.articleContent2 > p {
+.articleContent > p {
   line-height: 1.6rem;
 }
 
@@ -209,13 +204,18 @@ main ul {
   flex-direction: column;
   color: var(--white);
   background-position: top;
+  margin-top:60px;
 }
 
 .souhaitBox {
-  padding: 5% 15%;
+  padding: 5% 30% 5% 20%;
   margin-top: 2rem;
   line-height: 1.4rem;
-} 
+}
+
+.souhaitBox > h2 {
+  text-align: start;
+}
 
 .boxOrange {
   background-color: var(--orange);
@@ -261,6 +261,12 @@ main ul {
 
 .vehiculeAnnonce > img {
   width: 100%;
+}
+
+.vehiculeAnnonceFond {
+  background-color: #3a3d3f;
+  display: flex;
+  flex-direction: column;
 }
 
 .prix {
@@ -311,23 +317,23 @@ main ul {
   display: flex;
   flex-direction: column;
   color: var(--white);
-  background-position: top; 
+  background-position: top;
 }
 
 .venteLocationBox {
   padding: 5% 15%;
   margin-top: 10rem;
   line-height: 1.4rem;
-} 
+}
 
 .venteLocationEntete > h2{
   text-align: left;
-} 
+}
 .venteLocationEntete > p {
   color: var(--white);
   font-weight: bold;
   font-size: 1.4rem;
-} 
+}
 
 .venteLocationBox > p {
   color: var(--black);
@@ -346,7 +352,7 @@ main ul {
   }
 
 #footerFormNewsletter {
-  display: flex; 
+  display: flex;
   align-items: start;
 
 }
@@ -392,9 +398,7 @@ main ul {
   #headerContent {
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     padding-top: 30px;
-    /* align-items: baseline; */
     gap:10px;
     height:60px;
   }
@@ -411,33 +415,24 @@ main ul {
 
   #marque > p {
     margin:0;
-  }  
+  }
 
   #headerAddress, #headerPhone {
     display: flex;
     align-items: start;
     }
 
-  /* #headerAddress {
-    flex-basis: 26%;
-  } */
-
   #headerPhone {
-    /* flex-basis: 24%; */
     margin-left:0;
     gap:0;
   }
-
-  /* #headerTime {
-    flex-basis: 25%;
-  } */
 
   #phoneText {
     font-size: 1.1rem;
   }
   #headerBurger {
     display: none;
-  }  
+  }
 
   .icon {
     max-width: 30px;
@@ -455,7 +450,6 @@ main ul {
   #mainNav ul {
     list-style: none;
     flex-direction: row;
-    /* padding: 15px; */
   }
 
   .mainNavMenu {
@@ -487,11 +481,7 @@ main ul {
     margin:-4px 40px 0 40px;
     padding: 2rem 10%;
   }
-
-
 }
-
-
 
 @media screen and (min-width: 992px){
   /* Rajout des horaires en haut de page */
@@ -500,30 +490,113 @@ main ul {
     flex: 1;
     }
 
-    .imageArticleGauche {
-      width: 48%;
-      float: left;
-      margin-right: 50px;
-    }
+  .articleContent {
+    padding:5% 10% 0 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: min-content;
+    grid-gap: 20px;
+  }
 
-    
-    .imageArticleDroit {
-      width: 48%;
-      float: right;
-      margin-left: 50px;
-    }
+  .articleContent > div > h2{
+    margin-top:0px;
+   }
 
+  .souhaitContainer {
+    flex-direction: row;
+    align-items: center;
+    height: 500px;
+  }
 
-    .articleContent > h2{
-      margin-top:0;
+  .souhaitContainer > .souhaitBox:first-of-type {
+    padding: 2% 5% 2% 5%;
+    margin: 0 10px 0 10%;
+    line-height: 1.4rem;
+    flex:1;
+  }
 
-    }
+  .souhaitContainer > .souhaitBox:last-of-type {
+    padding: 2% 5% 2% 5%;
+    margin: 0 10% 0 10px;
+    line-height: 1.4rem;
+    flex:1;
+  }
 
-    .articleContent {
-      padding:5% 10% 0 10%;
-      float: left;
-    }
+  .vehiculeContainer {
+    padding: 1px  0 3% 0;
+  }
 
+  .vehiculeFlex {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    /* padding: 0; */
+  }
+
+  .vehiculeAnnonce:nth-child(2) {
+    display: flex;
+  }
+
+  .vehiculeAnnonceFond {
+    flex-direction: row-reverse;
+    /* padding-bottom: 15%; */
+    align-items: center;
+    justify-content: start;
+    /* background-color: #FF4848; */
+    height:30%;
+    gap:10px;
+  }
+
+  .modele {
+    margin-left:2%;
+    text-align: start;
+    /* width: 30%; */
+    /* flex-grow: 1; */
+    /* font-size: 1.2rem; */
+
+  }
+
+  .prix {
+    /* text-align: center; */
+    /* width: 170px; */
+    /* font-size: 1.2rem; */
+    width: 140px;
+    padding-left: 0;
+    padding-right: 0;
+    margin:0 3% 0 0;
+    /* font-size: 1.2rem; */
+  }
+
+  .prix > p {
+    /* margin-top:0; */
+    /* margin-bottom: 0; */
+    /* text-align: center; */
+    /* width:100px; */
+  }
+
+  .prixPromo {
+    /* text-decoration-line: line-through; */
+    /* color: var(--black); */
+    /* background-color: var(--blue); */
+    /* font-weight: normal; */
+    /* text-align: center; */
+    /* font-size: 1.1rem; */
+    /* width: 100px; */
+    /* margin-right:15px; */
+  }
+
+  .prixBarre {
+    text-decoration-line: line-through;
+    color: var(--black);
+    /* background-color: var(--blue); */
+    font-weight: normal;
+    /* text-align: center; */
+    font-size: 1.1rem;
+    /* width: 100px; */
+    /* margin-right:15px; */
+  }
 
 }
 
@@ -533,5 +606,9 @@ main ul {
   #headerSocial {
     display: flex;
     flex: 0.5;
+    }
+
+    .vehiculeAnnonce {
+      display: flex;
     }
 }
