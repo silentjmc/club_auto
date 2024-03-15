@@ -15,6 +15,7 @@
     <header id="headerContainer">
         <!-- Début Partie 1 du header pouvant contenir marque, adresse, téléphone, horaire, 2 réseeaux sociaux selon taille d'écran -->
         <div id="headerContent" >
+            <!-- Container Flex pour la marque et le menu burger affiché en mobile -->   
             <div id="marquePlusBurger">
                 <div  id="marqueNoAccueil">
                 <p class="textTitre"><strong>CLUB AUTO</strong></p>
@@ -25,6 +26,8 @@
                     </div>
                 </div>
             </div>
+            <!-- Fin Container Flex pour la marque et le menu burger affiché en mobile --> 
+            <!-- Bloc Adresse caché sous mobile -->   
             <address id="headerAddress">
                 <img src="img/map-marker.svg" alt="localisation du magasin" class="icon">
                 <div class="textIcon">
@@ -33,6 +36,8 @@
                     <p class="textDarkGrey">75005 PARIS</p>
                 </div>
             </address>
+            <!-- Fin  Bloc Adresse -->
+            <!-- Bloc Téléphone toujours visible -->    
             <address id="headerPhone">
                 <img src="img/phone.svg" alt="Téléphone"  class="icon">
                 <div class="textIcon">
@@ -40,16 +45,21 @@
                     <p id="phoneText" class="textBold">01 23 45 67 89</p>
                 </div>
             </address>
+            <!-- Fin Bloc Téléphone --> 
+            <!-- Bloc horaire d'ouverture visible sur certaines tailles d'écran -->     
             <div id="headerTime">
                 <div class="textIcon">
                     <p><span class="textBrown textTitre"><strong>OUVERTURE :</strong></span> Du lundi au Samedi</p>
                     <p><span class="textBrown textTitre"><strong>HORAIRES :</strong></span> De 9h à 17h</p>
                 </div>
             </div>
+            <!-- Fin Bloc horaire d'ouverture -->
+            <!-- Bloc 2 icônes réseaux visible sur certaines tailles d'écran -->                
             <div id="headerSocial">
                 <a href="http://www.facebook.fr" target="_blank"><img src="img/facebook_circle.svg" alt="logo facebook"  class="iconReseau"></a>
                 <a href="http://https://www.twitter.com" target="_blank"><img src="img/twitter_circle.svg" alt="logo twitter"  class="iconReseau"></a>
             </div>
+            <!-- Fin Bloc 2 icônes réseaux -->  
         </div>  
         <!-- Fin partie 1 du header -->
         <!-- Début Partie 2 du header avec la barre de navigation -->
@@ -68,6 +78,7 @@
     <main id="mainContentContact">
         <section id="formCard">
             <h1 id="titreContact">CONTACTEZ NOUS</h1>
+            <!-- Début du formulaire de contact  -->
             <form id="formContact">
                 <div class="formContactItem">
                     <label for="prenom">Prénom*</label>
@@ -93,21 +104,27 @@
                     <button type="submit" formmethod="get">ENVOYEZ</button>
                 </div>
             </form>
+            <!-- Fin du formulaire de contact  -->            
         </section>
     </main>
     <!-- Fin de la partie principale Mainv -->
     <!-- Début de la partie Footer -->
      <footer >
         <div id="footerContent" >
+            <!-- Bloc du Footer Club Auto -->
             <div  id="footerClub">
                 <p class="textWhite textTitre"><strong><span class="textBlue">CLUB</span> AUTO</strong></p>
                 <p class="textDarkGrey">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste, dolor aperiam repellendus quos a ut omnis assumenda.</p>
             </div>
+            <!-- Fin Bloc du Footer Club Auto -->
+            <!-- Bloc du Footer Horaires -->            
             <div id="footerHoraires">
                 <p class="textWhite textTitre"><strong>HORAIRES D'OUVERTURE</strong></p>
                 <p class="interligneCourt textBold textDarkGrey">lundi - Samedi : <span class="textWhite textNormal">09:00 - 17:00</span></p>
                 <p class="interligneCourt textBold textDarkGrey">Dimanche et jours fériés : <span class="textWhite textNormal">Fermé</span></p>
             </div>
+            <!-- Fin Bloc du Footer Horaires -->
+            <!-- Bloc du Footer inscription Newsletter -->            
             <div id="footerNewsletter">
                 <p class="textWhite textTitre"><strong>NEWSLETTER</strong></p>
                 <form id="footerFormNewsletter">
@@ -116,6 +133,8 @@
                 </form>
                 <p class="textDarkGrey">Inscrivez-vous pour recevoir les dernières offres</p>
             </div>
+            <!-- Fin Bloc du Footer inscription Newsletter -->  
+            <!-- Bloc du Footer Icônes réseaux --> 
             <div id="footerReseaux">
                 <p class="textWhite textTitre"><strong>RÉSEAUX SOCIAUX</strong></p>
                 <div id="footerIconReseaux">
@@ -126,10 +145,13 @@
                     <a href="https://www.youtube.com" target="_blank"><img src="img/youtube_square.svg" alt="logo youtube" class="iconFooter"></a>
                 </div>
             </div>
+            <!-- Fin Bloc du Footer Icônes réseaux --> 
         </div>
+        <!-- Bloc du Footer Copyright --> 
         <div id="copyright">
             <p class="textDarkGrey">Copyright &copy; Club Auto - Tous droits réservés</p>
         </div>
+        <!-- Fin Bloc du Footer Copyright --> 
     </footer>
 </body>
 </html>
