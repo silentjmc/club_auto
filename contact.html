@@ -15,48 +15,50 @@
     <header id="headerContainer">
         <!-- Début Partie 1 du header pouvant contenir marque, adresse, téléphone, horaire, 2 réseeaux sociaux selon taille d'écran -->
         <div id="headerContent" >
-                <div  id="marque">
+            <div id="marquePlusBurger">
+                <div  id="marqueNoAccueil">
                 <p class="textTitre"><strong>CLUB AUTO</strong></p>
-                </div>
-                <address id="headerAddress">
-                    <img src="img/map-marker.svg" alt="localisation du magasin" class="icon">
-                    <div class="textIcon">
-                        <p class="textBrown textTitre"><strong>ADRESSE :</strong></p>
-                        <p>AVENUE CHARLES DE GAULLE</p>
-                        <p>75005 PARIS</p>
-                    </div>
-                </address>
-                <address id="headerPhone">
-                    <img src="img/phone.svg" alt="Téléphone"  class="icon">
-                    <div class="textIcon">
-                        <p class="textBrown textTitre"><strong>TÉLÉPHONE :</strong></p>
-                        <p id="phoneText" class="textBold">01 23 45 67 89</p>
-                    </div>
-                </address>
-                <div id="headerTime">
-                    <div class="textIcon">
-                        <p><span class="textBrown textTitre"><strong>OUVERTURE :</strong></span> Du lundi au Samedi</p>
-                        <p><span class="textBrown textTitre"><strong>HORAIRES :</strong></span> De 9h à 17h</p>
-                    </div>
-                </div>
-                <div id="headerSocial">
-                    <a href="http://www.facebook.fr" target="_blank"><img src="img/facebook_circle.svg" alt="logo facebook"  class="iconReseau"></a>
-                    <a href="http://https://www.twitter.com" target="_blank"><img src="img/twitter_circle.svg" alt="logo twitter"  class="iconReseau"></a>
                 </div>
                 <div id="headerBurger">
                     <div>
                     <button id="menuToggle"><img src="img/menu_burger.svg" alt="Ouvrir / Fermer le menu"></button>
                     </div>
                 </div>
-            </div>  
+            </div>
+            <address id="headerAddress">
+                <img src="img/map-marker.svg" alt="localisation du magasin" class="icon">
+                <div class="textIcon">
+                    <p class="textBrown textTitre"><strong>ADRESSE :</strong></p>
+                    <p class="textDarkGrey">AVENUE CHARLES DE GAULLE</p>
+                    <p class="textDarkGrey">75005 PARIS</p>
+                </div>
+            </address>
+            <address id="headerPhone">
+                <img src="img/phone.svg" alt="Téléphone"  class="icon">
+                <div class="textIcon">
+                    <p class="textBrown textTitre"><strong>TÉLÉPHONE :</strong></p>
+                    <p id="phoneText" class="textBold">01 23 45 67 89</p>
+                </div>
+            </address>
+            <div id="headerTime">
+                <div class="textIcon">
+                    <p><span class="textBrown textTitre"><strong>OUVERTURE :</strong></span> Du lundi au Samedi</p>
+                    <p><span class="textBrown textTitre"><strong>HORAIRES :</strong></span> De 9h à 17h</p>
+                </div>
+            </div>
+            <div id="headerSocial">
+                <a href="http://www.facebook.fr" target="_blank"><img src="img/facebook_circle.svg" alt="logo facebook"  class="iconReseau"></a>
+                <a href="http://https://www.twitter.com" target="_blank"><img src="img/twitter_circle.svg" alt="logo twitter"  class="iconReseau"></a>
+            </div>
+        </div>  
         <!-- Fin partie 1 du header -->
         <!-- Début Partie 2 du header avec la barre de navigation -->
         <nav id="mainNav">
             <ul class="mainNavMenu">
-                <li><a href="index.html" class="mainNavMenuItem mainNavActif">ACCUEIL</a></li>
+                <li><a href="index.html" class="mainNavMenuItem">ACCUEIL</a></li>
                 <li><a href="vente.html" class="mainNavMenuItem">VENTE</a></li>
                 <li><a href="#" class="mainNavMenuItem">LOCATION</a></li>
-                <li><a href="contact.html" class="mainNavMenuItem">CONTACT</a></li>
+                <li><a href="contact.html" class="mainNavMenuItem mainNavActif">CONTACT</a></li>
             </ul>
         </nav>
         <!-- Fin Partie 2 du header -->
@@ -99,20 +101,20 @@
         <div id="footerContent" >
             <div  id="footerClub">
                 <p class="textWhite textTitre"><strong><span class="textBlue">CLUB</span> AUTO</strong></p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste, dolor aperiam repellendus quos a ut omnis assumenda.</p>
+                <p class="textDarkGrey">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste, dolor aperiam repellendus quos a ut omnis assumenda.</p>
             </div>
             <div id="footerHoraires">
                 <p class="textWhite textTitre"><strong>HORAIRES D'OUVERTURE</strong></p>
-                <p class="interligneCourt textBold">lundi - Samedi : <span class="textWhite textNormal">09:00 - 17:00</span></p>
-                <p class="interligneCourt textBold">Dimanche et jours fériés : <span class="textWhite textNormal">Fermé</span></p>
+                <p class="interligneCourt textBold textDarkGrey">lundi - Samedi : <span class="textWhite textNormal">09:00 - 17:00</span></p>
+                <p class="interligneCourt textBold textDarkGrey">Dimanche et jours fériés : <span class="textWhite textNormal">Fermé</span></p>
             </div>
             <div id="footerNewsletter">
                 <p class="textWhite textTitre"><strong>NEWSLETTER</strong></p>
                 <form id="footerFormNewsletter">
                     <input type="email" name="email" id="email" placeholder="Entrez votre email" autocomplete="email">
-                    <input type="image" name="imageBouton" id="imageBtnNewsletter" alt="Envoyer" src="img/rss.svg">
+                    <input type="image" name="imageBouton" id="imageBtnNewsletter" alt="Envoyer" aria-label="Envoyer" src="img/rss.svg">
                 </form>
-                <p>Inscrivez-vous pour recevoir les dernières offres</p>
+                <p class="textDarkGrey">Inscrivez-vous pour recevoir les dernières offres</p>
             </div>
             <div id="footerReseaux">
                 <p class="textWhite textTitre"><strong>RÉSEAUX SOCIAUX</strong></p>
@@ -126,7 +128,7 @@
             </div>
         </div>
         <div id="copyright">
-            <p>Copyright &copy; Club Auto - Tous droits réservés</p>
+            <p class="textDarkGrey">Copyright &copy; Club Auto - Tous droits réservés</p>
         </div>
     </footer>
 </body>

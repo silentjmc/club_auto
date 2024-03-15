@@ -15,15 +15,22 @@
     <header id="headerContainer">
         <!-- Début Partie 1 du header pouvant contenir marque, adresse, téléphone, horaire, 2 réseeaux sociaux selon taille d'écran -->
         <div id="headerContent" >
-                <div  id="marque">
-                <p class="textTitre"><strong>CLUB AUTO</strong></p>
+                <div id="marquePlusBurger">
+                    <div  id="marqueNoAccueil">
+                    <p class="textTitre"><strong>CLUB AUTO</strong></p>
+                    </div>
+                    <div id="headerBurger">
+                        <div>
+                        <button id="menuToggle"><img src="img/menu_burger.svg" alt="Ouvrir / Fermer le menu"></button>
+                        </div>
+                    </div>
                 </div>
                 <address id="headerAddress">
                     <img src="img/map-marker.svg" alt="localisation du magasin" class="icon">
                     <div class="textIcon">
                         <p class="textBrown textTitre"><strong>ADRESSE :</strong></p>
-                        <p>AVENUE CHARLES DE GAULLE</p>
-                        <p>75005 PARIS</p>
+                        <p class="textDarkGrey">AVENUE CHARLES DE GAULLE</p>
+                        <p class="textDarkGrey">75005 PARIS</p>
                     </div>
                 </address>
                 <address id="headerPhone">
@@ -43,18 +50,13 @@
                     <a href="http://www.facebook.fr" target="_blank"><img src="img/facebook_circle.svg" alt="logo facebook"  class="iconReseau"></a>
                     <a href="http://https://www.twitter.com" target="_blank"><img src="img/twitter_circle.svg" alt="logo twitter"  class="iconReseau"></a>
                 </div>
-                <div id="headerBurger">
-                    <div>
-                    <button id="menuToggle"><img src="img/menu_burger.svg" alt="Ouvrir / Fermer le menu"></button>
-                    </div>
-                </div>
             </div>  
         <!-- Fin partie 1 du header -->
         <!-- Début Partie 2 du header avec la barre de navigation -->
         <nav id="mainNav">
             <ul class="mainNavMenu">
-                <li><a href="index.html" class="mainNavMenuItem mainNavActif">ACCUEIL</a></li>
-                <li><a href="vente.html" class="mainNavMenuItem">VENTE</a></li>
+                <li><a href="index.html" class="mainNavMenuItem">ACCUEIL</a></li>
+                <li><a href="vente.html" class="mainNavMenuItem mainNavActif">VENTE</a></li>
                 <li><a href="#" class="mainNavMenuItem">LOCATION</a></li>
                 <li><a href="contact.html" class="mainNavMenuItem">CONTACT</a></li>
             </ul>
@@ -64,65 +66,94 @@
     <!-- fin header -->
     <!-- Début de la partie principale Mainv -->
     <main id="mainContentVente">
-        <h1>BMW 535i, Navi, Leather, ABS</h1>
-        <img src="img/vehicule2.jpg" alt="Photo d'une BMW 535i, Navi, Leather, ABS">
-        <nav>
+        <nav aria-label="Fil d'ariane" id="filAriane">
             <ul>
-                <li><a href="">DESCRIPTION</a></li>
-                <li><a href="">TECHNIQUE</a></li>
-                <li><a href="">OPTIONS</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a href="index.html">ACCUEIL</a></li>
+                <li><a href="#">VENTE</a></li>
+                <li><span aria-current="page">BMW 535i, NAVI, LEATHER, ABS</span></li>
             </ul>
         </nav>
-        <div id="items">
-            <div id="itemDescription">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, ratione? Perferendis hic provident ab reprehenderit, quidem laboriosam praesentium voluptates exercitationem eveniet doloremque tempore maiores! Totam placeat eius laboriosam aut. Possimus explicabo dolore fuga perspiciatis sit ducimus culpa!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore asperiores nobis omnis excepturi nihil. Sunt ullam iste quia autem soluta expedita aliquam. Harum maxime nemo perspiciatis eius dolor incidunt, consequatur sapiente fugiat animi corporis provident dolores blanditiis, ipsam, ipsum doloribus tempora aperiam? Inventore ut ipsa id assumenda quis accusantium iure eum libero odio veritatis rem maiores natus dignissimos, porro corporis praesentium amet dicta similique veniam, deleniti eius placeat! Odit nemo alias, ratione voluptas consectetur facilis veritatis totam tenetur debitis pariatur, enim eveniet quod. Molestiae facilis possimus tenetur. Consequuntur dicta quisquam voluptates cupiditate explicabo modi numquam libero, aspernatur ullam quia adipisci nemo alias recusandae ipsam delectus optio ipsa esse, fuga, blanditiis vel nulla? Numquam saepe sequi, optio exercitationem accusantium cumque minima expedita officia quis impedit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio placeat illum optio, culpa quaerat dolores sunt id voluptatum facere aliquid vel ullam nesciunt veniam et corrupti quidem?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptas reprehenderit quos asperiores quasi eaque aliquam laudantium officia magnam ipsum ratione repudiandae pariatur dolorem beatae, quaerat excepturi quo itaque. Eos inventore officia, ipsum repellat optio quas eveniet suscipit, quisquam illum expedita deleniti cum temporibus ab.</p>
-                <p>OPTIONS</p>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Dolor, sint. Consectetur, delectus deleniti.</li>
-                    <li>Perspiciatis, corporis. Hic, natus quas.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                </ul>
-            </div>
-            <div id="itemTechnique">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, ratione? Perferendis hic provident ab reprehenderit, quidem laboriosam praesentium voluptates exercitationem eveniet doloremque tempore maiores! Totam placeat eius laboriosam aut. Possimus explicabo dolore fuga perspiciatis sit ducimus culpa!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore asperiores nobis omnis excepturi nihil. Sunt ullam iste quia autem soluta expedita aliquam. Harum maxime nemo perspiciatis eius dolor incidunt, consequatur sapiente fugiat animi corporis provident dolores blanditiis, ipsam, ipsum doloribus tempora aperiam? Inventore ut ipsa id assumenda quis accusantium iure eum libero odio veritatis rem maiores natus dignissimos, porro corporis praesentium amet dicta similique veniam, deleniti eius placeat! Odit nemo alias, ratione voluptas consectetur facilis veritatis totam tenetur debitis pariatur, enim eveniet quod. Molestiae facilis possimus tenetur. Consequuntur dicta quisquam voluptates cupiditate explicabo modi numquam libero, aspernatur ullam quia adipisci nemo alias recusandae ipsam delectus optio ipsa esse, fuga, blanditiis vel nulla? Numquam saepe sequi, optio exercitationem accusantium cumque minima expedita officia quis impedit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio placeat illum optio, culpa quaerat dolores sunt id voluptatum facere aliquid vel ullam nesciunt veniam et corrupti quidem?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptas reprehenderit quos asperiores quasi eaque aliquam laudantium officia magnam ipsum ratione repudiandae pariatur dolorem beatae, quaerat excepturi quo itaque. Eos inventore officia, ipsum repellat optio quas eveniet suscipit, quisquam illum expedita deleniti cum temporibus ab.</p>
-            </div>
-            <div id="itemOptions">
-                <p>OPTIONS</p>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Dolor, sint. Consectetur, delectus deleniti.</li>
-                    <li>Perspiciatis, corporis. Hic, natus quas.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                </ul>
-            </div>
-            <div id="itemContact">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, ratione? Perferendis hic provident ab reprehenderit, quidem laboriosam praesentium voluptates exercitationem eveniet doloremque tempore maiores! Totam placeat eius laboriosam aut. Possimus explicabo dolore fuga perspiciatis sit ducimus culpa!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore asperiores nobis omnis excepturi nihil. Sunt ullam iste quia autem soluta expedita aliquam. Harum maxime nemo perspiciatis eius dolor incidunt, consequatur sapiente fugiat animi corporis provident dolores blanditiis, ipsam, ipsum doloribus tempora aperiam? Inventore ut ipsa id assumenda quis accusantium iure eum libero odio veritatis rem maiores natus dignissimos, porro corporis praesentium amet dicta similique veniam, deleniti eius placeat! Odit nemo alias, ratione voluptas consectetur facilis veritatis totam tenetur debitis pariatur, enim eveniet quod. Molestiae facilis possimus tenetur. Consequuntur dicta quisquam voluptates cupiditate explicabo modi numquam libero, aspernatur ullam quia adipisci nemo alias recusandae ipsam delectus optio ipsa esse, fuga, blanditiis vel nulla? Numquam saepe sequi, optio exercitationem accusantium cumque minima expedita officia quis impedit.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio placeat illum optio, culpa quaerat dolores sunt id voluptatum facere aliquid vel ullam nesciunt veniam et corrupti quidem?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptas reprehenderit quos asperiores quasi eaque aliquam laudantium officia magnam ipsum ratione repudiandae pariatur dolorem beatae, quaerat excepturi quo itaque. Eos inventore officia, ipsum repellat optio quas eveniet suscipit, quisquam illum expedita deleniti cum temporibus ab.</p>
+        <h1 id="titreVente">BMW 535i, Navi, Leather, ABS</h1>
+        <img src="img/vehicule2.jpg" alt="Photo d'une BMW 535i, Navi, Leather, ABS">
+        <div id="tabsContainer">
+            <div id="tabs">
+                <input class="input" name="tabs" type="radio" id="tab-1" checked="checked">
+                <label class="label" for="tab-1">DESCRIPTION</label>
+                <div class="content">  
+                    <p class="sousTitre">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, ratione? Perferendis hic provident ab reprehenderit, quidem laboriosam praesentium voluptates exercitationem eveniet doloremque tempore maiores! Totam placeat eius.</p>
+                    <p class="textContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore asperiores nobis omnis excepturi nihil. Sunt ullam iste quia autem soluta expedita aliquam. Harum maxime nemo perspiciatis eius dolor incidunt, consequatur sapiente fugiat animi corporis provident dolores blanditiis, ipsam, ipsum doloribus tempora aperiam? Inventore ut ipsa id assumenda quis accusantium iure eum libero odio veritatis rem maiores natus dignissimos, porro corporis praesentium amet dicta similique veniam, deleniti eius placeat! Odit nemo alias, ratione voluptas consectetur facilis veritatis totam tenetur debitis pariatur, enim eveniet quod. Molestiae facilis possimus tenetur. Consequuntur dicta quisquam voluptates cupiditate explicabo modi numquam libero, aspernatur ullam quia adipisci nemo alias recusandae ipsam delectus optio ipsa esse, fuga, blanditiis vel nulla? Numquam saepe sequi, optio exercitationem accusantium cumque minima expedita officia quis impedit.</p>
+                    <p class="textContent textTabulation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio placeat illum optio, culpa quaerat dolores sunt id voluptatum facere aliquid vel ullam nesciunt veniam et corrupti quidem?</p>
+                    <p class="textContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptas reprehenderit quos asperiores quasi eaque aliquam laudantium officia magnam ipsum ratione repudiandae pariatur dolorem beatae, quaerat excepturi quo itaque. Eos inventore officia, ipsum repellat optio quas eveniet suscipit, quisquam illum expedita deleniti cum temporibus ab.</p>
+                    <h2>OPTIONS</h2>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                </div>
+                <input class="input" name="tabs" type="radio" id="tab-2">
+                <label class="label" for="tab-2">TECHNIQUE</label>
+                <div class="content"> 
+                    <p class="sousTitre">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, ratione? Perferendis hic provident ab reprehenderit, quidem laboriosam praesentium voluptates exercitationem eveniet doloremque tempore maiores! Totam placeat eius.</p>
+                    <p class="textContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore asperiores nobis omnis excepturi nihil. Sunt ullam iste quia autem soluta expedita aliquam. Harum maxime nemo perspiciatis eius dolor incidunt, consequatur sapiente fugiat animi corporis provident dolores blanditiis, ipsam, ipsum doloribus tempora aperiam? Inventore ut ipsa id assumenda quis accusantium iure eum libero odio veritatis rem maiores natus dignissimos, porro corporis praesentium amet dicta similique veniam, deleniti eius placeat! Odit nemo alias, ratione voluptas consectetur facilis veritatis totam tenetur debitis pariatur, enim eveniet quod. Molestiae facilis possimus tenetur. Consequuntur dicta quisquam voluptates cupiditate explicabo modi numquam libero, aspernatur ullam quia adipisci nemo alias recusandae ipsam delectus optio ipsa esse, fuga, blanditiis vel nulla? Numquam saepe sequi, optio exercitationem accusantium cumque minima expedita officia quis impedit.</p>
+                </div>
+                <input class="input" name="tabs" type="radio" id="tab-3">
+                <label class="label" for="tab-3">OPTIONS</label>
+                <div class="content"> 
+                    <h2>OPTIONS</h2>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                </div>
+                <input class="input" name="tabs" type="radio" id="tab-4">
+                <label class="label" for="tab-4">CONTACT</label>
+                <div class="content">  
+                    <h2>CONTACTEZ NOUS</h2>
+                    <form id="formContact">
+                        <div class="formContactItem">
+                            <label for="prenom">Prénom*</label>
+                            <input type="text" name="prenom" id="prenom" placeholder="Entrez votre prénom" required autofocus>
+                        </div>
+                        <div class="formContactItem">
+                            <label for="nom">Nom*</label>
+                            <input type="text" name="nom" id="nom" placeholder="Entrez votre nom" required>
+                        </div>
+                        <div class="formContactItem">
+                            <label for="mail">Email*</label>
+                            <input type="email" name="mail" id="mail" placeholder="Entrez une adresse mail valide" required>
+                        </div>
+                        <div class="formContactItem">
+                            <label for="telephone">Téléphone</label>
+                            <input type="tel" name="telephone" id="telephone" placeholder="Numéro de téléphone">
+                        </div>
+                        <div class="formContactItem itemMessage">
+                            <label for="message">Message</label>
+                            <textarea name="messahe" id="message" cols="30" rows="8" placeholder="Ecrivez votre message"></textarea>
+                        </div>
+                        <div class="formContactItemBtn">
+                            <button type="submit" formmethod="get">ENVOYEZ</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
     <!-- Fin de la partie principale Mainv -->
     <!-- Début de la partie Footer -->
-     <footer >
+    <footer >
         <div id="footerContent" >
             <div  id="footerClub">
                 <p class="textWhite textTitre"><strong><span class="textBlue">CLUB</span> AUTO</strong></p>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste, dolor aperiam repellendus quos a ut omnis assumenda.</p>
+                <p class="textDarkGrey">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque iste, dolor aperiam repellendus quos a ut omnis assumenda.</p>
             </div>
             <div id="footerHoraires">
                 <p class="textWhite textTitre"><strong>HORAIRES D'OUVERTURE</strong></p>
-                <p class="interligneCourt textBold">lundi - Samedi : <span class="textWhite textNormal">09:00 - 17:00</span></p>
-                <p class="interligneCourt textBold">Dimanche et jours fériés : <span class="textWhite textNormal">Fermé</span></p>
+                <p class="interligneCourt textBold textDarkGrey">lundi - Samedi : <span class="textWhite textNormal">09:00 - 17:00</span></p>
+                <p class="interligneCourt textBold textDarkGrey">Dimanche et jours fériés : <span class="textWhite textNormal">Fermé</span></p>
             </div>
             <div id="footerNewsletter">
                 <p class="textWhite textTitre"><strong>NEWSLETTER</strong></p>
@@ -130,7 +161,7 @@
                     <input type="email" name="email" id="email" placeholder="Entrez votre email" autocomplete="email">
                     <input type="image" name="imageBouton" id="imageBtnNewsletter" alt="Envoyer" src="img/rss.svg">
                 </form>
-                <p>Inscrivez-vous pour recevoir les dernières offres</p>
+                <p class="textDarkGrey">Inscrivez-vous pour recevoir les dernières offres</p>
             </div>
             <div id="footerReseaux">
                 <p class="textWhite textTitre"><strong>RÉSEAUX SOCIAUX</strong></p>
@@ -144,7 +175,7 @@
             </div>
         </div>
         <div id="copyright">
-            <p>Copyright &copy; Club Auto - Tous droits réservés</p>
+            <p class="textDarkGrey">Copyright &copy; Club Auto - Tous droits réservés</p>
         </div>
     </footer>
 </body>

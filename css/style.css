@@ -51,6 +51,10 @@ h2 {
   color: var(--grey);
 }
 
+.textDarkGrey {
+  color: darkgrey;
+}
+
 .textWhite {
   color: var(--white);
 }
@@ -61,6 +65,10 @@ h2 {
 
 .textBold {
   font-weight: bold;
+}
+
+.textLight {
+  font-weight: lighter;
 }
 
 .interligneCourt {
@@ -78,28 +86,46 @@ h2 {
 
 #headerContent {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+}
+
+#marquePlusBurger {
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-end; */
+  justify-content: flex-end;
+  margin: 15px 0;
 }
 
 #headerPhone {
     display: flex;
     gap: 5px;
     width: auto;
-}
-
-#headerPhone {
-  margin-left:5%;
+    margin-left:5%;
+    padding-bottom: 20px;
 }
 
 #headerBurger{
-    align-self:end;
-    justify-content: end;
-    margin-top: 30px;
+    display: flex;
+    /* align-self:center; */
+    /* justify-content: flex-end; */
     margin-right:10px;
 }
 
 #marque, #headerAddress, #headerTime, #headerSocial {
     display: none;
+}
+
+#marqueNoAccueil {
+  display: flex;
+  font-size: 2rem;
+  justify-content: start;
+  width: 100%;
+  margin-left:5%;
+}
+
+#marqueNoAccueil > p {
+  margin:0;
 }
 
 .textIcon > p {
@@ -126,23 +152,23 @@ h2 {
   background-color: var(--black);
 }
 
+#mainNav {
+  width: 100%;
+  display: none;
+  background-color: var(--white);
+}
+
 #mainNav ul {
     list-style: none;
     display: flex;
     flex-direction: column;
 }
 
-#mainNav {
-    width: 100%;
-    display: none;
-    background-color: var(--white);
-}
-
 .mainNavMenu {
     text-decoration: none;
     font-weight: bold;
     margin: 0px;
-    padding:0px
+    padding: 0px
 }
 
 .mainNavMenuItem {
@@ -474,14 +500,144 @@ padding-top:20px;
   margin: 30px 0 10px 0;
   cursor: pointer;
 }
-
-
-
-/* .formContactItem {
-  grid-template-columns: repeat(2, 1fr);
-} */
-
 /* <---- Fin CSS pour la page contact ----> */
+
+/* <---- Début CSS pour la page Vente ----> */
+
+#mainContentVente {
+  margin: 5%;
+}
+
+#filAriane {
+  padding: 0 .5rem;
+  border-bottom: var(--grey) 1px solid;
+  color: var(--grey);
+  font-size: 0.7rem;
+  /* margin: 40px 5% 0 5%; */
+}
+
+#filAriane ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#filAriane li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 .25rem;
+  content: "/";
+}
+
+#filAriane li > a {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+#titreVente {
+  background-color: var(--white);
+  color: var(--black);
+  margin: 0;
+  padding: 30px 0 10px 0;
+  font-size: 1.6rem;
+}
+
+#mainContentVente > img {
+  width:100%;
+  margin: 5% 0;
+}
+
+#tabs {
+	display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content:start;
+  background-color: var(--black);
+}
+
+.input {
+  display: none;
+}
+
+.label {
+  padding: 20px 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin:0 5px;
+  text-align: center;
+}
+
+.label:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.label:active {
+  background: var(--white);
+}
+
+.input:focus + .label {
+  z-index: 1;
+}
+
+.input:checked + .label {
+  background: var(--white);
+  color: var(--black);
+  box-shadow: 0px -5px 0px 0px var(--brown);
+  margin:0 5px;
+}
+
+.content {
+  display: none;
+  padding: 20px 0 30px;
+  background: #fff;
+  order: 99;
+  width: 100%;
+}
+
+.input:checked + .label + .content {
+  display: block;
+}
+
+.sousTitre {
+  font-size: 1.6rem;
+}
+
+.textContent {
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+}
+
+.textTabulation {
+  border-left: var(--brown) 4px solid;
+  font-style: italic;
+  font-weight: lighter;
+  padding-left: 30px;
+}
+
+#tabs ul {
+  list-style-image: url('../img/check_circle.svg');
+  padding-left:20px;
+}
+
+#tabs li {
+  padding-left:20px
+}
+
+#tabs h2 {
+  text-align: start;
+}
+
+.content .formContactItem {
+  margin: 0;
+}
+
+
+/* <---- Fin CSS pour la page Vente ----> */
+
 
 /* <---- CSS Media queries ----> */
 /* <---- A partir de 768px ----> */
@@ -501,7 +657,7 @@ padding-top:20px;
     height:60px;
   }
 
-  #marque, #headerAddress, #headerPhone {
+  #marque, #marquePlusBurger, #headerAddress, #headerPhone {
   display: flex;
   flex: 1;
   }
@@ -513,6 +669,16 @@ padding-top:20px;
 
   #marque > p {
     margin:0;
+  }
+
+  #marquePlusBurger {
+    margin:0;
+    align-items: start;
+    /* justify-content: center; */
+  }
+
+  #marqueNoAccueil {
+    justify-content: center;
   }
 
   #headerAddress, #headerPhone {
@@ -591,7 +757,7 @@ padding-top:20px;
     }
 
   #formCard {
-    margin: 150px 10% 50px 10%;
+    margin: 100px 10% 50px 10%;
   }
 
   #titreContact {
@@ -618,7 +784,35 @@ padding-top:20px;
     grid-area: 3 / 3 / 4 / 4;
     justify-content: start;
   }
+
+  #mainContentVente {
+    margin-top: 0;
+  }
+
+  #tabs {
+    flex-direction: row;
+  }
+
+  .content  #formContact {
+    margin-left: 0;
+    margin-right: 0;
+    gap: 0 0;
+  }
+
+  .content label,.content input {
+    /* padding-left: 5px; */
+    margin-right: 5%;
+  }
+
+  /* #formContact {
+    grid-template-columns: repeat(3,1fr);
+    gap: 0 4%;
+    margin-left: 5%;
+    margin-right: 5%;
+  } */
+
 }
+
 /* <---- Fin pour 768px ----> */
 
 /* <---- A partir de 992px ----> */
@@ -726,6 +920,24 @@ padding-top:20px;
   #footerClub, #footerHoraires, #footerNewsletter, #footerReseaux {
     flex:1;
   }
+  
+  #mainContentVente {
+    /* margin: 5% 10%; */
+    margin-left:10%;
+    margin-right:10%;
+  }
+
+  #mainContentVente > img {
+    max-width:1024px;
+  }
+
+  #tabsContainer{
+    /* margin:0 10%; */
+    max-width:1024px;
+  }
+
+
+
 }
 /* <---- Fin 992px ----> */
 
